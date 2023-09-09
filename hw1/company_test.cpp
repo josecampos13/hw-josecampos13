@@ -37,8 +37,6 @@ int main() {
     tester.merge(4,1);         
     tester.merge(2,0);         
 
-    cout << "General Test Cases success" << endl;
-
 
     // Below are Company Tracker tests for Edge/Special Cases
 
@@ -67,8 +65,6 @@ int main() {
     testerNegative.inSameCompany(0, 1);
     testerNegative.inSameCompany(-1,-1);
 
-    cout << "Negative Company Test Cases Success" << endl;
-
 
     // TEST CASES ZERO: for 0 Companies
     // None should run since there are no comapnies
@@ -87,8 +83,6 @@ int main() {
     tester0.inSameCompany(0, 1);
     tester0.inSameCompany(-1,-1);
 
-    cout << "Zero-Company Test Cases Succes" << endl;
-
 
     //TEST CASES SINGLE: for 1 Company
 
@@ -106,8 +100,6 @@ int main() {
     tester1.inSameCompany(0, 1);
     tester1.inSameCompany(-1,-1);
 
-
-    cout << "Single Company Test Cases Success" << endl;
 
     //Test Cases 5: for many companies
 
@@ -132,10 +124,6 @@ int main() {
     testerLarge.inSameCompany(7,9);            
     testerLarge.inSameCompany(0,19);
     testerLarge.inSameCompany(5,13);
-
-    cout << "Many Companies Test Cases Success" << endl;
-
-    cout << "Reached end of Test Cases, all dtors should follow" << endl;
 
     return 0;
 

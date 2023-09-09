@@ -4,7 +4,6 @@
 // Initializes the tracker with n students and their 1-person companies.
 CompanyTracker::CompanyTracker(int n)
 {
-  std::cout << "ctor running for " << n << std::endl;
 
   numCompanies = n;
   if (numCompanies > 0) {
@@ -17,8 +16,6 @@ CompanyTracker::CompanyTracker(int n)
     }
     
     realPrint();
-
-    std::cout << "ctor ran for " << numCompanies << std::endl;
   }
 }
 
@@ -26,36 +23,12 @@ CompanyTracker::CompanyTracker(int n)
 CompanyTracker::~CompanyTracker()
 {
 
-  /*
-
-  if (numCompanies > 0) {
-
-    for (int i = 0; i < numCompanies; i++) {
-      
-      delete companies[i];  
-      companies[i] = nullptr;                         // CHECK ME: Am i deallocating correctly
-    }
-    delete [] companies; 
-    companies = nullptr;
-
-  }
-  */
-
-  std::cout << "dtor running for " << numCompanies << std::endl;
-
- std::cout << "big comp size is " << bigComp.size() << std::endl;
-
   if (numCompanies > 0) {
     for(unsigned int i = 0; i < bigComp.size(); ++i){
-
-      std::cout << i << std::endl;
       clearMem(bigComp[i]);
-
     }
     delete [] companies;
   }
-
-  std::cout << "dtor ran for " << numCompanies << std::endl;
 
 }
 
